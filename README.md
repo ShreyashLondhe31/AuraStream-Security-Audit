@@ -11,7 +11,7 @@ Finding: The login endpoint accepted raw JSON objects, allowing for query operat
 
 Impact: Critical. Unauthorized access to any user account without valid credentials.
 
-Evidence: ![NoSQL Injection Success](../poc-evidence/NoSQL_Injection_Success.PNG)
+Evidence: ![NoSQL Injection Success](/poc-evidence/NoSQL_Injection_Success.PNG)
 
 Remediation: Enforced strict input type checking and restored password hashing verification layers.
 
@@ -20,6 +20,6 @@ Finding: The profile deletion endpoint lacked a server-side ownership check.
 
 Impact: High. Any authenticated user could delete profiles belonging to other users.
 
-Evidence: ![IDOR](../poc-evidence/IDOR_Attack_Success.PNG)
+Evidence: ![IDOR](/poc-evidence/IDOR_Attack_Success.PNG)
 
 Remediation: Implemented an authorization check verifying profile.userId === req.user._id before executing database deletions.
